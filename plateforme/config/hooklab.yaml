@@ -1,0 +1,61 @@
+# Hook Lab — décortique les hooks des meilleurs créateurs sur 4 canaux (verbal, texte, visuel, auditif).
+# Pour chaque créateur : ses meilleures vidéos (score outlier = vues / médiane de SON compte), jamais les vues brutes.
+# Handles vérifiés le 2026-10-18 (yt-dlp / navigateur). « à vérifier » = le collecteur confirme ou marque « introuvable ».
+# Ajoute un créateur ici ou depuis le dashboard (Hook Lab → + Créateur).
+per_creator: 10          # vidéos décortiquées par créateur (les meilleures)
+min_score: 2.0           # score outlier minimum (sauf vidéos de départ = seeds)
+max_duration_s: 120      # vidéos courtes seulement
+lookback_days: 365       # on cherche les meilleurs hooks de l'année, pas seulement du mois
+videos_per_account: 60   # vidéos récupérées par compte pour calculer la médiane
+
+creators:
+  # Experts du contenu court (valables pour toutes les niches). AJOUTE ici 5 à 10 créateurs QUI MARCHENT DANS TA NICHE
+  # (ou depuis le dashboard : Hook Lab → + Créateur). Handles vérifiés le 2026-10-18.
+  - name: Mino Lee
+    why: "Vlog business documentaire, hooks de défi et de preuve"
+    accounts:
+      - {platform: tiktok, handle: minolee.mp4, status: vérifié}
+      - {platform: tiktok, handle: mino.mp4, status: vérifié}
+      - {platform: youtube, handle: mino.mp4, status: vérifié}
+  - name: Jun Yuh
+    why: "Hooks texte et visuel très courts, productivité / étudiants"
+    accounts:
+      - {platform: tiktok, handle: jun_yuh, status: vérifié}
+  - name: Kallaway
+    why: "Théoricien des hooks (archétypes, alignement verbal/visuel) qui applique sa méthode"
+    accounts:
+      - {platform: tiktok, handle: kallawaymarketing, status: vérifié}
+      - {platform: instagram, handle: kallawaymarketing, status: à vérifier}
+  - name: Dan Koe
+    why: "Hooks contrarian / idées, face cam minimaliste"
+    accounts:
+      - {platform: tiktok, handle: thedankoe, status: vérifié}
+      - {platform: youtube, handle: DanKoeTalks, status: vérifié}
+  - name: Ali Abdaal
+    why: "Ex-médecin devenu créateur/entrepreneur, hooks éducatifs"
+    accounts:
+      - {platform: tiktok, handle: aliabdaal, status: vérifié}
+      - {platform: instagram, handle: aliabdaal, status: vérifié}
+  - name: Alex Hormozi
+    why: "Hooks affirmation / preuve, autorité business"
+    accounts:
+      - {platform: instagram, handle: hormozi, status: vérifié}
+  - name: Leila Hormozi
+    why: "Hooks leadership / ops, face cam sobre"
+    accounts:
+      - {platform: tiktok, handle: leilahormozi, status: vérifié}
+  - name: Dan Martell
+    why: "SaaS / automatisation pour entrepreneurs"
+    accounts:
+      - {platform: instagram, handle: danmartell, status: vérifié}
+
+  # --- Ta niche (exemple à remplacer)
+  # - name: Nom du créateur
+  #   niche: ta niche
+  #   why: "pourquoi ses hooks t'intéressent"
+  #   accounts:
+  #     - {platform: tiktok, handle: son_handle, status: à vérifier}
+
+# Vidéos de départ (seeds) : toujours décortiquées, même sans score outlier.
+# Import depuis un tableau (engine hooklab --import fichier.xlsx) ou ajout depuis le dashboard.
+seeds: []

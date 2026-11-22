@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f5f7">
+  <title>Ma plateforme</title>
+  <link rel="stylesheet" href="/static/app.css?v=montage-2">
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <a class="skip" href="#view">Aller au contenu</a>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo"><i data-lucide="clapperboard"></i></span>
+        <div><b>Ma plateforme</b><small>Ton studio</small></div>
+      </div>
+      <nav id="nav" aria-label="Navigation">
+        <a data-view="today" title="Aujourd'hui"><i data-lucide="sun"></i><span>Aujourd'hui</span></a>
+        <a data-view="week" title="Calendrier"><i data-lucide="calendar-days"></i><span>Semaine</span></a>
+        <a data-view="montage" title="Monter ma vidéo"><i data-lucide="scissors"></i><span>Monter ma vidéo</span></a>
+        <a data-view="broll" title="B-roll"><i data-lucide="aperture"></i><span>B-roll</span></a>
+        <a data-view="stats" title="Stats"><i data-lucide="activity"></i><span>Stats</span></a>
+        <a data-view="discover" title="Découvertes"><i data-lucide="radar"></i><span>Découvertes</span></a>
+        <a data-view="hooklab" title="Hook Lab"><i data-lucide="scan-search"></i><span>Hook Lab</span></a>
+        <a data-view="context" title="Mon contexte"><i data-lucide="notebook-pen"></i><span>Mon contexte</span></a>
+        <a data-view="chat" title="Chat"><i data-lucide="messages-square"></i><span>Chat</span></a>
+        <a data-view="system" title="Système"><i data-lucide="settings-2"></i><span>Système</span></a>
+      </nav>
+      <div class="side-bottom">
+        
+        <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème"><i data-lucide="moon"></i><span>Mode sombre</span></button>
+      </div>
+    </aside>
+    <main>
+      <header class="topbar">
+        <div id="crumbs" class="crumbs"></div>
+        <div class="top-actions">
+          <div id="jobs-pill" class="jobs-pill hidden" role="status" aria-live="polite"></div>
+          <button class="btn" data-run="daily" title="Routine du jour"><i data-lucide="sunrise"></i><span class="lbl">Routine du jour</span></button>
+          <button class="btn primary" data-run="weekly" title="Lancer la semaine"><i data-lucide="rocket"></i><span class="lbl">Lancer la semaine</span></button>
+        </div>
+      </header>
+      <section id="view" class="view" tabindex="-1"></section>
+    </main>
+  </div>
+
+  <div id="drawer" class="drawer hidden"><div class="drawer-bg" data-close></div><div class="drawer-panel" id="drawer-panel" role="dialog" aria-modal="true" tabindex="-1"></div></div>
+  <div id="modal" class="modal hidden" data-close-bg><div class="modal-card" id="modal-card" role="dialog" aria-modal="true"></div></div>
+  <div id="prompter" class="prompter hidden" role="dialog" aria-label="Prompteur">
+    <div class="prompter-bar">
+      <span id="prompter-title"></span>
+      <label>Vitesse <input id="prompter-speed" type="range" min="0" max="10" value="3"></label>
+      <label>Taille <input id="prompter-size" type="range" min="28" max="84" value="50"></label>
+      <button class="btn" id="prompter-play"><i data-lucide="play"></i>Espace</button>
+      <button class="btn" id="prompter-close"><i data-lucide="x"></i>Échap</button>
+    </div>
+    <div class="prompter-guide" aria-hidden="true"></div>
+    <div class="prompter-text" id="prompter-text"></div>
+  </div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <script src="/static/app.js?v=montage-2"></script>
+</body>
+</html>

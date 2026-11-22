@@ -1,0 +1,329 @@
+account: personal
+language: fr
+proven_formats:
+- id: lecon_face_cam
+  name: Leçon / erreur du jour, face cam
+  description: 'Une seule idée tirée d''un vrai moment. Court, vulnérable, utile : c''est ce qui transforme un spectateur
+    curieux en fan, parce qu''il apprend en même temps que toi.'
+  script_structure: hook erreur ou contrarian → ce qui s'est passé (2 phrases) → mais… (ce que j'ai compris) → donc (la règle)
+    → application concrète → CTA soft
+  edit_template:
+    format: face cam 9:16 brute, une prise si possible, 2-3 plans B-roll illustratifs
+    pacing: jump cuts serrés sur les silences, aucun effet, un punch-in 115 % sur « donc la règle c'est »
+    subtitles: mot-à-mot, 2-3 mots par ligne, blanc contour noir, la règle en jaune, centre-bas
+    broll:
+    - écran du téléphone qui montre le moment (noms floutés)
+    - plan de marche dans la rue
+    - post-it ou carnet avec la règle écrite à la main
+    on_screen_text: la leçon en 3-5 mots dans le tiers supérieur + la règle en carton plein écran 1,5 s avant la fin
+    music: voix + sound design neutre (whoosh, clics, pop de texte)
+  inspiration_urls: []
+  principles:
+  - S2
+  - S3
+  - D5
+  - H-V2
+  - R2
+  - C4
+- id: coulisses_journee
+  name: 'Coulisses : une vraie journée'
+  description: 'Le vlog documentaire : un moment fort, des enjeux réels, des images brutes. La régularité crée l''habitude
+    de revenir, les images brutes créent la confiance.'
+  script_structure: hook in medias res (le moment fort du jour) → l'enjeu d'aujourd'hui → 3-4 moments de la journée → le chiffre
+    du jour → leçon en une phrase → teaser de la prochaine vidéo + CTA follow
+  edit_template:
+    format: 'vlog POV 9:16 : face cam à la main ou sur trépied + B-roll de la journée'
+    pacing: coupe toutes les 1,5-2 s, jump cuts à chaque respiration, x2 sur les trajets, punch-in 110 % sur le chiffre du
+      jour
+    subtitles: mot-à-mot, 2-3 mots par ligne, blanc contour noir, chiffres et mots clés en jaune, centre-bas
+    broll:
+    - trajet (transports, marche)
+    - mains sur le clavier
+    - écran de travail (flouté si besoin)
+    - carnet ou to-do du jour
+    - notification qui arrive sur le téléphone
+    on_screen_text: date + lieu en haut à gauche (ex. « LUN · PARIS ») + le chiffre du jour en grand quand il est dit
+    music: voix + sound design neutre (whoosh, clics, pop de texte)
+  inspiration_urls: []
+  principles:
+  - D3
+  - D5
+  - S4
+  - F5
+  - F1
+  - R3
+  - C3
+  - H-V5
+- id: bilan_chiffres
+  name: Bilan chiffré / transparence totale
+  description: 'La transparence sur de vrais chiffres (CA, abonnés, heures, appels) est ce qui se partage et s''enregistre
+    le plus : les gens reviennent voir si ça avance vraiment.'
+  script_structure: hook chiffré (où j'en suis) → écran de preuve → 3 à 5 chiffres clés → ce qui a marché / ce qui a raté
+    → objectif de la semaine prochaine → CTA follow
+  edit_template:
+    format: face cam au bureau 9:16 + preuve plein écran (green screen ou coupe sèche)
+    pacing: coupe toutes les 2 s, chaque chiffre pop + zoom sur la ligne correspondante de la preuve
+    subtitles: mot-à-mot, 2-3 mots par ligne, blanc contour noir, montants en jaune, centre-bas
+    broll:
+    - capture d'écran du tableau de bord (montants réels ou floutés)
+    - Google Sheets ou Notion de suivi
+    - carnet où la semaine est barrée
+    on_screen_text: « BILAN DE LA SEMAINE » en haut + chaque chiffre en grand quand il est dit
+    music: voix + sound design neutre (whoosh, clics, pop de texte)
+  inspiration_urls: []
+  principles:
+  - D2
+  - H-V3
+  - H-VIS3
+  - F2
+  - F6
+  - D5
+  - C3
+- id: mythe_realite
+  name: Mythe vs réalité (contrarian éducatif)
+  description: On prend une croyance très répandue dans la niche et on la casse avec du vécu ou une preuve. Ça polarise sur
+    l'idée (jamais sur une personne) et ça positionne comme expert.
+  script_structure: la croyance (A) → la casser (B) → pourquoi les gens y croient → ce qui marche vraiment (2-3 points concrets)
+    → la règle à retenir → CTA save
+  edit_template:
+    format: face cam 9:16 au bureau ou dehors + texte à l'écran « MYTHE » / « RÉALITÉ »
+    pacing: coupe toutes les 1,5-2 s, whoosh sur chaque point numéroté, punch-in sur le « mais »
+    subtitles: mot-à-mot, 2-3 mots par ligne, blanc contour noir, mots clés en jaune, centre-bas
+    broll:
+    - capture d'écran d'un conseil courant (anonymisé)
+    - preuve de ton côté (résultat, écran)
+    - plan de toi qui barres une ligne au marqueur
+    on_screen_text: '« MYTHE : … » barré puis « RÉALITÉ : … » + gros chiffres 1/2/3 au début de chaque point'
+    music: voix + sound design neutre (whoosh, clics, pop de texte)
+  inspiration_urls: []
+  principles:
+  - H-V2
+  - H-V7
+  - P18
+  - P19
+  - S2
+  - R1
+  - C3
+- id: methode_3_etapes
+  name: Ma méthode en 3 étapes
+  description: Un résultat concret, puis la méthode exacte en 3 étapes actionnables. Format qui s'enregistre beaucoup et qui
+    prouve l'expertise (MOFU).
+  script_structure: hook résultat (ce que la méthode permet) → pour qui → étape 1 → étape 2 → étape 3 (avec un exemple réel)
+    → l'erreur à éviter → CTA mot-clé pour la version complète
+  edit_template:
+    format: face cam 9:16 + screen recording ou démonstration à chaque étape
+    pacing: coupe toutes les 2 s, chaque étape s'ouvre sur un carton « ÉTAPE X », punch-in sur l'exemple
+    subtitles: mot-à-mot, 2-3 mots par ligne, blanc contour noir, numéros d'étape en jaune, centre-bas
+    broll:
+    - démonstration de chaque étape (écran ou mains)
+    - résultat final à l'écran
+    - carnet avec les 3 étapes
+    on_screen_text: titre de la méthode en haut + « ÉTAPE 1/2/3 » au début de chaque étape
+    music: voix + sound design neutre (whoosh, clics, pop de texte)
+  inspiration_urls: []
+  principles:
+  - H-V3
+  - H-V4
+  - S2
+  - R2
+  - C2
+  - C5
+  - P24
+- id: storytime
+  name: 'Storytime : le moment qui a tout changé'
+  description: Une histoire vraie racontée en « mais / donc », avec un enjeu, un échec et une leçon. C'est ce qui crée l'attachement
+    à la personne derrière le compte.
+  script_structure: hook in medias res (le pire ou le meilleur moment) → le contexte en une phrase → mais… (l'obstacle) →
+    donc… (la décision) → le résultat honnête → la leçon → CTA follow
+  edit_template:
+    format: face cam 9:16 assis, cadrage serré, 2-3 inserts photo/vidéo d'archive
+    pacing: 'rythme en vague : début rapide, milieu posé, fin très concise ; silence d''une demi-seconde avant la chute'
+    subtitles: mot-à-mot, 2-3 mots par ligne, blanc contour noir, centre-bas
+    broll:
+    - photos ou vidéos d'archive du moment raconté
+    - objet lié à l'histoire en gros plan
+    - plan de toi aujourd'hui (contraste avant/après)
+    on_screen_text: l'année ou le lieu du moment raconté en haut (ex. « 2023 · MON PREMIER CLIENT »)
+    music: voix + sound design neutre (silences, bruitages discrets)
+  inspiration_urls: []
+  principles:
+  - S3
+  - S5
+  - D5
+  - H-V5
+  - R14
+  - P21
+  - P25
+  - C3
+topics: []
+test_formats:
+- id: check_in_progression
+  name: Check-in de progression (format transformation fitness)
+  source_niche: fitness / transformation physique
+  source_description: 'Les créateurs fitness publient des check-ins réguliers (pesée, mensurations, photo avant/après), toujours
+    dans le même cadrage : on revient voir si la courbe bouge.'
+  adaptation: On remplace la pesée par les « mesures » de ton projet (CA, abonnés, heures de travail, clients…) sur une carte
+    de stats plein écran, au même endroit et dans le même cadrage à chaque check-in.
+  script_structure: pesée (carte de stats plein écran) → le chiffre qui a bougé ou pas → pourquoi (une cause) → la stat qui
+    bloque (vulnérabilité) → ajustement → rendez-vous au prochain check-in
+  edit_template:
+    format: face cam 9:16 fixe, même cadrage à chaque check-in + carte de stats plein écran
+    pacing: ouverture sur la carte de stats 1,5 s, puis coupe toutes les 2 s, flèche animée haut/bas sur chaque chiffre
+    subtitles: mot-à-mot, 2-3 mots par ligne, blanc contour noir, chiffres en vert si hausse et rouge si baisse, centre-bas
+    broll:
+    - carte de stats façon appli de suivi
+    - tableau de suivi (Sheets/Notion)
+    - calendrier de la semaine
+    on_screen_text: '« CHECK-IN #X » en haut + carte avec 4-5 stats'
+    music: voix + sound design neutre (whoosh, clics, pop de texte)
+  principles:
+  - H-V3
+  - H-VIS3
+  - H-VIS2
+  - F2
+  - D5
+  - C3
+  variants:
+  - subject: 'Check-in #1 : mes mesures de départ'
+    hooks:
+    - À la salle, on prend ses mesures avant de commencer. Voilà les miennes.
+    - Mes stats de départ. Note-les, on compare dans un mois.
+    text_hook: 'CHECK-IN #1'
+    visual_hook: Tu montes sur une balance, le montage remplace le poids par ton chiffre principal
+    script: 'Premier check-in. Ceux qui font une transformation physique se pèsent avant de commencer. Moi je fais pareil
+      pour mon projet.
+
+      [Stat 1], [stat 2], [stat 3]. Et l''objectif : [objectif réaliste].
+
+      Chaque semaine je refais la pesée, même cadrage, mêmes chiffres. Abonne-toi et note mes chiffres de départ.
+
+      '
+    cta: Abonne-toi et note mes chiffres de départ
+    cta_type: follow_series
+    setup: chambre
+    shots:
+    - 'Hook visuel : balance + chiffre remplacé au montage (2 s)'
+    - Carte de stats plein écran (2 s)
+    - A-roll face cam, cadrage fixe (repère au sol)
+  - subject: 'Check-in #2 : ce qui a bougé (et ce qui bloque)'
+    hooks:
+    - Deuxième pesée. Un chiffre a bougé, un autre pas du tout.
+    - 'Check-in : je te montre la stat qui bloque.'
+    text_hook: 'CHECK-IN #2'
+    visual_hook: Carte de stats avec une flèche verte et une flèche rouge
+    script: 'Deuxième check-in. [La stat qui a bougé] est passée de [avant] à [après], grâce à [la cause].
+
+      Mais [la stat qui bloque] n''a pas bougé. Honnêtement, c''est parce que [la raison].
+
+      Cette semaine je change une chose : [l''ajustement]. Rendez-vous au prochain check-in.
+
+      '
+    cta: Rendez-vous au prochain check-in
+    cta_type: follow_series
+    setup: chambre
+    shots:
+    - Carte de stats flèches haut/bas (2 s)
+    - 'A-roll face cam, même cadrage que le #1'
+  - subject: 'Check-in #3 : la courbe complète'
+    hooks:
+    - Trois check-ins plus tard, voilà la courbe.
+    - Je superpose mes trois pesées. Regarde.
+    text_hook: 'CHECK-IN #3'
+    visual_hook: Graphique qui se dessine à l'écran
+    script: 'Troisième check-in. Je mets les trois pesées côte à côte : [stat 1 sur trois semaines], [stat 2 sur trois semaines].
+
+      Ce qui a vraiment fait la différence : [la cause principale]. Ce que j''arrête : [ce qui ne sert à rien].
+
+      Abonne-toi pour la suite de la courbe.
+
+      '
+    cta: Abonne-toi pour la suite de la courbe
+    cta_type: follow_series
+    setup: bureau
+    shots:
+    - Graphique animé (montage) (3 s)
+    - A-roll face cam, même cadrage
+- id: recette_etapes
+  name: La recette (format cuisine)
+  source_niche: cuisine
+  source_description: 'Les créateurs cuisine montrent le plat fini en premier, puis les ingrédients et les étapes en plans
+    très courts : on sait tout de suite ce qu''on va obtenir.'
+  adaptation: Le « plat fini » devient un résultat concret de ta niche ; les ingrédients sont les outils / éléments nécessaires
+    ; les étapes sont montrées en plans très courts, comme une recette.
+  script_structure: le résultat fini d'abord → les « ingrédients » (2-4) → les étapes en plans courts → le « dressage » (le
+    résultat final) → CTA save
+  edit_template:
+    format: plans très courts en vue de dessus ou d'écran, voix off, 1 plan face cam à la fin
+    pacing: un plan par étape (1-2 s), coupe sur chaque action, accélérés x2
+    subtitles: mot-à-mot, 2-3 mots par ligne, blanc contour noir, centre-bas
+    broll:
+    - vue de dessus du bureau
+    - screen recording de chaque étape
+    - le résultat final en gros plan
+    on_screen_text: '« LA RECETTE : [résultat] » en haut + la liste des ingrédients en carton'
+    music: voix + sound design neutre (whoosh, clics, pop de texte)
+  principles:
+  - H-VIS1
+  - H-V3
+  - S2
+  - R3
+  - C3
+  variants:
+  - subject: La recette de [résultat concret de ta niche]
+    hooks:
+    - Voilà la recette exacte pour [résultat].
+    - Résultat d'abord. La recette ensuite.
+    text_hook: LA RECETTE
+    visual_hook: Le résultat final en gros plan, puis retour en arrière
+    script: 'Le résultat d''abord : [résultat]. Les ingrédients : [ingrédient 1], [ingrédient 2], [ingrédient 3].
+
+      Étape un, [étape]. Deux, [étape]. Trois, [étape]. Et voilà.
+
+      Enregistre la recette pour la refaire.
+
+      '
+    cta: Enregistre la recette
+    cta_type: save
+    setup: ecran
+    shots:
+    - 'Hook visuel : résultat final en gros plan (2 s)'
+    - Ingrédients en carton (2 s)
+    - Un plan court par étape (1-2 s chacun)
+  - subject: La recette ratée (et comment la rattraper)
+    hooks:
+    - J'ai raté cette recette exprès pour te montrer l'erreur.
+    - Version ratée vs version réussie.
+    text_hook: RATÉ vs RÉUSSI
+    visual_hook: Écran partagé résultat raté / résultat réussi
+    script: 'À gauche, la version ratée. À droite, la version réussie. La différence tient à une étape : [l''étape].
+
+      Ce que la plupart font : [l''erreur]. Ce qu''il faut faire : [la correction].
+
+      Enregistre-la pour ne pas rater la tienne.
+
+      '
+    cta: Enregistre-la pour ne pas rater la tienne
+    cta_type: save
+    setup: ecran
+    shots:
+    - Écran partagé raté / réussi (2 s)
+    - Gros plan sur l'étape qui change tout (3 s)
+  - subject: La recette en 30 secondes chrono
+    hooks:
+    - '[Résultat] en 30 secondes. Chrono lancé.'
+    - Je te fais [résultat] avant la fin de cette vidéo.
+    text_hook: 30 SECONDES CHRONO
+    visual_hook: Chronomètre qui démarre à l'écran
+    script: 'Chrono lancé. [Étape 1]. [Étape 2]. [Étape 3]. Et [résultat], en [temps réel].
+
+      Le secret, c''est [le détail qui fait la différence]. Enregistre la vidéo et tente le chrono.
+
+      '
+    cta: Enregistre et tente le chrono
+    cta_type: save
+    setup: ecran
+    shots:
+    - Chronomètre à l'écran (montage)
+    - Plans accélérés de chaque étape
+    - Résultat final + chrono arrêté
+rappels: []

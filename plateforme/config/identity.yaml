@@ -1,0 +1,49 @@
+# Identité et ligne éditoriale — injectées dans TOUS les prompts de génération (calendrier, scripts, hooks, CTA, montage)
+# et appliquées par engine/ethics.py (garde-fous automatiques). C'est le fichier le plus important : prends 10 minutes.
+
+owner_name: "À_REMPLIR"           # ton prénom (apparaît dans les prompts et le dashboard)
+
+# Qui tu es, en 3-5 lignes. Ce qui te rend différent doit transparaître naturellement dans les hooks et les scripts.
+identity: >
+  [À COMPLÉTER : qui tu es, qui tu aides, ton parcours réel]
+
+# Règles toujours actives (modifiables). Elles s'appliquent à toutes les vidéos.
+rules:
+  - "Jamais de développement personnel générique (constance, se lever tôt, entourage). Jamais de tiret long."
+  - "Vente honnête : pas de fausse urgence, pas de faux chiffres, pas de promesses exagérées, pas de manipulation."
+  - "Les chiffres et résultats cités sont toujours réels ; s'ils sont inconnus, écrire [à compléter : ...]."
+  - "On critique une idée ou une pratique, jamais une personne. Pas d'indécence."
+
+# Musique quand les règles islamiques sont désactivées
+music_rule_free: "Musique autorisée, basse sous la voix (libre de droits) — ou voix + sound design seuls"
+music_rule_free_en: "Music allowed, low under the voice (royalty-free) — or voice + sound design only"
+
+# ------------------------------------------------------------------ règles islamiques (optionnelles)
+# true = zéro musique instrumentale, garde-fous riba / jeux d'argent, 1-2 rappels business par semaine,
+#        versets et hadiths UNIQUEMENT récupérés depuis une source (API Coran, hadith-api, MCP hadith), jamais de mémoire.
+islamic_rules: false
+
+islamic:
+  rules:
+    - "AUCUNE musique instrumentale dans aucune vidéo (ni beat, ni son tendance avec instruments). Autorisé : voix, nasheed a cappella (sans instruments ni percussions), bruitages, ambiance réelle, sound design neutre. Un format qui repose sur une musique est adapté : rythme des coupes, variations de voix, silences, texte à l'écran, bruitages."
+    - "Jamais de sujets, hooks ou CTA contraires à l'éthique islamique : riba/intérêts, jeux d'argent/paris, mensonge ou promesses exagérées, contenu indécent, moqueries."
+    - "1 à 2 vidéos par semaine sont des rappels islamiques axés business (intention, barakah, honnêteté en vente, tawakkul et effort, gestion du temps, l'argent comme moyen), intégrés au format documentaire, jamais des sermons."
+    - "Ne JAMAIS citer un verset ou un hadith de mémoire : uniquement du texte récupéré depuis une source vérifiable (API Coran, hadith-api), hadiths sahih/hasan avec recueil + numéro, marqués « À VÉRIFIER ». Sans source : l'idée seule + « citation à ajouter »."
+  rappels:
+    per_week_per_account: 2          # 1 à 2
+    weekdays: [3, 6]                 # 0=lundi … 6=dimanche → jeudi et dimanche (slot éprouvé n°2)
+    themes: [intention, barakah, honnetete, tawakkul, temps, argent]
+  forbidden_patterns:
+    riba: ["\\b(bank )?interest rates?\\b", "\\bcompound interest\\b", "\\b(personal |payday )?loans?\\b", "\\bcredit cards? debt\\b", "\\bmargin trading\\b", "\\bleveraged?\\b(?! (your|my|the) (skills?|time|audience|content|ai))", "\\bint[eé]r[eê]ts? (bancaires?|compos[eé]s)", "\\bcr[eé]dit (conso|à la consommation|revolving)", "\\bpr[eê]t (à|a) int[eé]r[eê]t", "\\beffet de levier\\b", "\\bmarge\\b.*trading", "\\bdividendes? bancaires?"]
+    gambling: ["\\bgambl", "\\bsports? bet", "\\bbet(ting)? (on|money)", "\\blottery\\b", "\\bslot machines?\\b", "\\bcrypto (pump|gamble)", "\\bcasino", "\\bparis? sportifs?", "\\bbetting\\b", "\\bpoker\\b", "\\bloterie", "\\bjackpot", "\\bmachines? à sous", "\\bmemecoins?", "\\bpump\\b"]
+    music: ["\\bmusic\\b", "\\bbackground track\\b", "\\binstrumental\\b(?! music)", "\\binstruments?\\b(?! ?free)", "\\bpercussions?\\b", "\\bmusiques?\\b", "\\bson tendance\\b", "\\btrending sound\\b", "\\bsong\\b", "\\bbeat ?drop", "\\bon the beat\\b", "\\bplaylist\\b"]
+
+music_rule: "AUCUNE musique instrumentale — voix, nasheed a cappella, bruitages et sound design sans instruments (whoosh, clics, pop de texte, ambiance)"
+music_rule_en: "NO instrumental music — voice, a cappella nasheed, sound effects and instrument-free sound design only (whoosh, clicks, text pops, ambience)"
+
+# ------------------------------------------------------------------ garde-fous toujours actifs
+# Regex insensibles à la casse — un contenu généré qui matche est rejeté (Claude) ou signalé (banque).
+forbidden_patterns:
+  exaggeration: ["\\bguarantee(d|s)? (you|results?|income|money|clients|sales|success|profit)", "\\b(i|we) guarantee\\b", "\\bguaranteed (results?|income|money|clients|sales|success|profit)", "\\beffortless(ly)?\\b", "\\bpassive income while you sleep\\b", "\\bget rich (quick|fast)\\b", "\\beasy money\\b", "\\b100 ?% (success|guaranteed)", "\\bmillionaire in \\d+", "\\bje (te |vous )?garantis\\b", "\\bgaranti(e|s)? (de |des r[eé]sultats|que tu)", "\\br[eé]sultats? garanti", "\\bsans (aucun )?effort\\b", "\\bargent facile\\b", "\\bdevenir riche (vite|rapidement)", "\\b100 ?% (de )?r[eé]ussite", "\\bmillionnaire en \\d+"]
+  indecent: ["\\bthirst trap\\b", "\\bexplicit\\b", "\\bonlyfans\\b", "\\bsexy\\b", "\\bnsfw\\b"]
+  mockery: ["\\bmake fun of\\b", "\\broast(ing)? (this|my|a) (guy|girl|follower|subscriber)", "\\bhumiliat", "\\blaugh(ing)? at (him|her|them)\\b", "\\bse moquer de\\b", "\\bclash(er)?\\b", "\\bhumilier\\b", "\\bridiculiser\\b"]

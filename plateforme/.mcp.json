@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hadith": {
+      "command": ".venv/bin/python",
+      "args": ["mcp/hadith/server.py"]
+    }
+  }
+}

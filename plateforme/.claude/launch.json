@@ -1,0 +1,1 @@
+{"version":"0.0.1","configurations":[{"name":"plateforme","runtimeExecutable":".venv/bin/python","runtimeArgs":["-m","engine","ui","--port","8787","--no-open"],"port":8787}]}

@@ -1,0 +1,19 @@
+# Ton compte. L'identifiant technique reste « personal » ; le nom affiché est `name`.
+id: personal
+name: "À_REMPLIR"
+my_handles:
+  instagram: "À_REMPLIR"
+  tiktok: "À_REMPLIR"
+  youtube: "À_REMPLIR"
+niche: "À_REMPLIR"
+
+# Comptes de référence DE TA NICHE (5 à 15), remplis par le skill plateforme.
+reference_accounts: []
+
+# Comptes d'AUTRES NICHES (sources des « formats test » : on emprunte une mécanique qui marche ailleurs)
+other_niche_accounts:
+  - {platform: tiktok, handle: dineiro.off, niche: sketch, status: "vérifié", note: "FR, sketch qui bascule en pitch (twist promo)"}
+  - {platform: youtube, handle: jeffnippard,    niche: fitness,   status: "vérifié"}
+  - {platform: youtube, handle: nickdigiovanni, niche: cuisine,   status: "vérifié"}
+  - {platform: youtube, handle: drewbinsky,     niche: voyage,    status: "vérifié"}
+  - {platform: youtube, handle: ryan,           niche: challenge, status: "vérifié", note: "Ryan Trahan — défis épisodiques"}

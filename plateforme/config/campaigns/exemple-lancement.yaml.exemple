@@ -1,0 +1,63 @@
+# EXEMPLE de campagne — inactive tant que l'extension est « .exemple ».
+# Pour l'activer : copie ce fichier en « mon-lancement.yaml » (dans ce dossier), adapte les dates, le brief et les angles,
+# puis régénère la période : ./bin/engine calendar --start AAAA-MM-JJ --days 3
+# (ou demande-le au Chat du dashboard : « crée une campagne de lancement du 3 au 5 novembre pour mon offre X »).
+#
+# Une campagne remplace la rotation habituelle (2 formats éprouvés + 1 format test) sur une période :
+# chaque jour liste ses 3 vidéos, chacune avec un TYPE (défini dans `types`) et un ANGLE imposé.
+id: exemple-lancement
+account: personal
+start: 2026-11-03
+end: 2026-11-05
+title: "Semaine de lancement de mon offre"
+brief: |
+  Semaine de lancement : on présente [ton offre] à [ta cible].
+  Faits produit : uniquement ceux de context/03_offre.md ; tout le reste en [à compléter : ...]. Aucun résultat inventé.
+  CTA : UN SEUL mot-clé de commentaire pour toute la campagne, « [MOT-CLÉ] », jamais un mot-clé différent par vidéo.
+
+types:
+  presentation:
+    name: "Présentation de l'offre — face cam"
+    funnel: mofu
+    setup: bureau
+    instructions: >
+      Présentation face caméra : pourquoi tu as créé l'offre (le problème vécu ou observé), ce qu'elle fait concrètement,
+      pour qui c'est (et pour qui ce n'est pas), CTA. Ton sincère, zéro hype.
+  temoignage:
+    name: "Témoignage client"
+    funnel: bofu
+    setup: bureau
+    instructions: >
+      Tu racontes le cas : situation du client avant, ce que vous avez mis en place, résultat. N'INVENTE RIEN : nom,
+      chiffres avant/après et autorisation du client = [à compléter : ...].
+  objection:
+    name: "Objection"
+    funnel: bofu
+    setup: bureau
+    instructions: >
+      Vidéo COURTE (20-30 s) : hook = l'objection telle que le prospect la dit, puis la réponse honnête (reformuler,
+      recadrer, preuve ou mécanisme concret, limite assumée si l'objection est fondée), CTA mot-clé. Aucune garantie de résultat.
+  fonctionnalite:
+    name: "Présentation d'une fonctionnalité / d'un module"
+    funnel: mofu
+    setup: ecran
+    instructions: >
+      Démo écran d'UNE fonctionnalité (30-45 s) : le problème qu'elle règle, la démo, ce que ça change pour le client.
+
+features:
+  module_1: "[ce que fait la fonctionnalité / le module 1]"
+  module_2: "[ce que fait la fonctionnalité / le module 2]"
+
+days:
+  2026-11-03:
+    - {type: presentation, angle: "Pourquoi j'ai créé [ton offre]"}
+    - {type: fonctionnalite, feature: module_1}
+    - {type: objection, angle: "« C'est trop cher »"}
+  2026-11-04:
+    - {type: temoignage, angle: "Cas client n°1 [à compléter : client, avant/après]"}
+    - {type: fonctionnalite, feature: module_2}
+    - {type: objection, angle: "« Je n'ai pas le temps »"}
+  2026-11-05:
+    - {type: objection, angle: "« Ça ne marchera pas dans mon cas »"}
+    - {type: temoignage, angle: "Cas client n°2 [à compléter]"}
+    - {type: objection, angle: "« Je peux le faire seul »"}

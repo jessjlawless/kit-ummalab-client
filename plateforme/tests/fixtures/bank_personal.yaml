@@ -1,0 +1,52 @@
+account: personal
+language: fr
+proven_formats:
+  - id: episode_vlog
+    name: "Épisode Jour X"
+    script_structure: "hook → journée → tension → teaser"
+    edit_template: {format: "POV vlog + face cam", pacing: "cut 2 s", subtitles: "mot-à-mot", broll: ["laptop"], on_screen_text: "Jour {jour}/90", music: "lo-fi trending sound"}
+    principles: [D1]
+    no_challenge: {name: "Épisode documentaire", edit_template: {on_screen_text: "date + lieu en haut à gauche"}}
+topics:
+  - {id: pb_001, format: episode_vlog, day_hint: 1, subject: "Lancement Jour {jour}", hooks: ["Jour {jour} : je vise {objectif}", "B"], text_hook: "Jour {jour}/90", visual_hook: "porte", script: "Script du jour {jour}. Demain jour {jour_suivant}.", cta: "Abonne-toi", cta_type: follow_series, setup: bureau, shots: ["A-roll", "B-roll : laptop"], principles: [D1]}
+  - {id: pb_002, format: episode_vlog, subject: "Evergreen 2", hooks: ["a", "b"], text_hook: t, visual_hook: v, script: "s", cta: c, cta_type: soft, setup: chambre, shots: ["x"], principles: [S1]}
+  - {id: pb_004, format: episode_vlog, subject: "Evergreen 4", hooks: ["c", "d"], text_hook: t, visual_hook: v, script: "s4", cta: c, cta_type: soft, setup: bureau, shots: ["y"], principles: [S2]}
+  - {id: pb_003, format: episode_vlog, subject: "Casino et argent facile garanti", hooks: ["a", "b"], text_hook: t, visual_hook: v, script: "s", cta: c, cta_type: soft, setup: exterieur, shots: ["x"], principles: [S1]}
+test_formats:
+  - id: tf_fitness
+    name: "Progress check-in"
+    source_niche: fitness
+    adaptation: "check-in chiffré"
+    edit_template: {format: "split screen", music: "son tendance"}
+    variants:
+      - {subject: "Check-in v1", hooks: ["h1", "h2"], text_hook: t, visual_hook: v, script: "s", cta: c, cta_type: soft, setup: bureau, shots: ["B-roll : balance"]}
+      - {subject: "Check-in v2", hooks: ["h1", "h2"], text_hook: t, visual_hook: v, script: "s", cta: c, cta_type: soft, setup: bureau, shots: ["x"]}
+rappels:
+  - id: rp_001
+    format: episode_vlog
+    theme: tawakkul
+    subject: "Tawakkul et effort"
+    hooks: ["a", "b"]
+    text_hook: t
+    visual_hook: v
+    script: "Avant : {citation}. Après."
+    cta: c
+    cta_type: soft
+    setup: chambre
+    shots: ["x"]
+    citation_candidates:
+      - {type: quran, ref: "65:3", expected_keywords: ["confiance", "suffit"]}
+  - id: rp_002
+    format: episode_vlog
+    theme: intention
+    subject: "Faux candidat"
+    hooks: ["a", "b"]
+    text_hook: t
+    visual_hook: v
+    script: "X {citation} Y"
+    cta: c
+    cta_type: soft
+    setup: chambre
+    shots: ["x"]
+    citation_candidates:
+      - {type: quran, ref: "1:1", expected_keywords: ["voiture"]}

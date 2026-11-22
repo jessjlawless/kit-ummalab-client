@@ -1,0 +1,4 @@
+#!/bin/sh
+# Wrapper sans activer le venv : ./bin/engine weekly | daily | report ...
+DIR="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$DIR" && exec "$DIR/.venv/bin/python" -m engine "$@"
