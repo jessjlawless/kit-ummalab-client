@@ -22,14 +22,13 @@ Tu viens de ChatGPT ? Il rapatrie ce que ChatGPT sait de toi.
 3. Colle cette phrase et envoie :
 
 ```
-Installe mon kit Claude privé et ouvre ma plateforme de contenu : https://github.com/jessjlawless/kit-ummalab-client
+Installe le kit Claude qui est ici et ouvre ma plateforme de contenu : https://github.com/jessjlawless/kit-ummalab-client
 
 Fais les étapes dans l'ordre, en français, avec des messages courts :
-1. Vérifie que je suis sur Mac. Vérifie que `git` et `gh` (GitHub CLI) sont installés. S'il en manque un, propose de l'installer et attends mon accord.
-2. Vérifie que je suis connecté avec `gh auth status`. Sinon, lance `gh auth login --web` : je me connecte moi-même dans le navigateur. Ne me demande jamais de mot de passe, de code ou de clé dans le chat.
-3. Clone le dépôt privé dans `~/Documents/.kit-ummalab-client` avec `gh repo clone jessjlawless/kit-ummalab-client`. S'il existe déjà, fais `git pull`. Si l'accès est refusé, dis-moi de vérifier que j'ai accepté l'invitation sur https://github.com/notifications, puis arrête-toi.
-4. Lis `install.sh`, explique-moi en 3 lignes ce qu'il va installer, puis lance-le avec `bash install.sh`.
-5. Lis `~/.claude/skills/plateforme/SKILL.md` et suis-le jusqu'au bout : installation, questions sur ma niche, première veille, puis ouverture de ma plateforme.
+1. Vérifie que je suis sur Mac et que `git` est installé. S'il manque, propose de l'installer et attends mon accord.
+2. Télécharge le kit avec `git clone https://github.com/jessjlawless/kit-ummalab-client ~/Documents/.kit-ummalab-client`. S'il existe déjà, fais `git pull` dans ce dossier.
+3. Lis `install.sh`, explique-moi en 3 lignes ce qu'il va installer, puis lance-le avec `bash install.sh`.
+4. Lis `~/.claude/skills/plateforme/SKILL.md` et suis-le jusqu'au bout : installation, questions sur ma niche, première veille, puis ouverture de ma plateforme.
 
 Ne publie rien, n'envoie rien et n'utilise jamais les cookies ou mots de passe de mon navigateur.
 ```
